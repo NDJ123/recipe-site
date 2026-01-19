@@ -129,13 +129,13 @@ def generate_html(recipes):
         :root {{
             --primary: #2563eb;
             --primary-dark: #1e40af;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-            --shadow: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --bg: #000000;
+            --card-bg: #1a1a1a;
+            --text: #e5e5e5;
+            --text-light: #a0a0a0;
+            --border: #333333;
+            --shadow: 0 1px 3px rgba(255,255,255,0.1);
+            --shadow-lg: 0 10px 25px rgba(255,255,255,0.1);
         }}
         
         body {{

@@ -2440,7 +2440,7 @@
     "bookmark_title": "Pizza dough Recipe - Taste.com.au Mobile",
     "host": "www.taste.com.au",
     "scraped_successfully": false,
-    "error": "502 Server Error: Bad Gateway for url: https://www.taste.com.au/recipes/14433/pizza+dough?nk=9e471fbf84a36836aba5b92f63f64ef1-1768824546"
+    "error": "recipe-scrapers exception: No cuisine data in SchemaOrg."
   },
   {
     "title": "Beetroot Gravadlax | Fish Recipes | Jamie Oliver Recipes",

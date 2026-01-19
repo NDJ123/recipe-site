@@ -1,0 +1,64 @@
+name: Build and Deploy Recipe Site
+
+on:
+  # Run when recipes.json is updated
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/recipes.json'
+      - 'scripts/generate_site.py'
+      - '.github/workflows/**'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Check if recipes.json exists
+      id: check_recipes
+      run: |
+        if [ -f "data/recipes.json" ]; then
+          echo "recipes_exist=true" >> $GITHUB_OUTPUT
+          echo "✅ Recipes file found"
+        else
+          echo "recipes_exist=false" >> $GITHUB_OUTPUT
+          echo "⚠️ No recipes file found - run scraper locally first"
+          exit 1
+        fi
+    
+    - name: Generate site
+      run: |
+        python scripts/generate_site.py
+    
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './site'
+    
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

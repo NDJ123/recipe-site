@@ -1,5 +1,13 @@
 [
   {
+    "title": "Slow-cooked chicken with a crisp corn crust | Ottolenghi Recipe",
+    "url": "https://ottolenghi.co.uk/pages/recipes/slow-cooked-chicken-crisp-corn-crust",
+    "bookmark_title": "Slow-cooked chicken with a crisp corn crust | Ottolenghi Recipe",
+    "host": "ottolenghi.co.uk",
+    "scraped_successfully": false,
+    "error": "recipe-scrapers exception: Cooking time information not found in SchemaOrg"
+  },
+  {
     "title": "Tom yum gai",
     "url": "https://www.bbc.co.uk/food/recipes/tom_yum_gai_61132",
     "bookmark_title": "Tom yum soup recipe - BBC Food",
@@ -2440,7 +2448,7 @@
     "bookmark_title": "Pizza dough Recipe - Taste.com.au Mobile",
     "host": "www.taste.com.au",
     "scraped_successfully": false,
-    "error": "recipe-scrapers exception: No cuisine data in SchemaOrg."
+    "error": "502 Server Error: Bad Gateway for url: https://www.taste.com.au/recipes/14433/pizza+dough?nk=bc1a17c4deaf2a098c52284f125dd7da-1768840723"
   },
   {
     "title": "Beetroot Gravadlax | Fish Recipes | Jamie Oliver Recipes",
